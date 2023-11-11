@@ -103,7 +103,7 @@ if (isset($_GET['delete'])) {
 
                // Check if the current admin is the one being displayed
                if ($fetch_accounts['id'] == $admin_id) {
-                  echo '<a href="update_profile.php" class="option-btn">Update</a>';
+                  echo '<a href="update_profile.php" class="btn btn-success">Update</a>';
                }
 
                echo '</td>';

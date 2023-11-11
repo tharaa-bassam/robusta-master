@@ -16,7 +16,7 @@ include 'components/add_cart.php';
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +30,7 @@ include 'components/add_cart.php';
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="css/components.css">
    
     <!-- swiper cdn link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
@@ -223,8 +224,8 @@ include 'components/add_cart.php';
 <a href="category.php?category=Beans" class="box">
 
     <div class="box">
-        <div class="image">
-            <img src="images/cat-2.jpg" alt="">
+        <div class="image" style="height: 54rem;" >
+            <img src="images/cat-5.jpg" alt="">
         </div>
         <div class="content">
             <h3>Hot Drinks</h3>
@@ -256,14 +257,18 @@ include 'components/add_cart.php';
          <input type="hidden" name="price" value="<?= $fetch_products['price']; ?>">
          <input type="hidden" name="image" value="<?= $fetch_products['image']; ?>">
          <a href="quick_view.php?pid=<?= $fetch_products['id']; ?>" class="fas fa-eye"></a>
-         <button type="submit" class="fas fa-shopping-cart" name="add_to_cart"></button>
+         <!-- <button type="submit" class="fas fa-shopping-cart" name="add_to_cart"></button> -->
          <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
          <a href="category.php?category=<?= $fetch_products['category']; ?>" class="cat"><?= $fetch_products['category']; ?></a>
          <div class="name"><?= $fetch_products['name']; ?></div>
          <div class="flex">
             <div class="price"><span>$</span><?= $fetch_products['price']; ?></div>
             <input type="number" name="qty" class="qty" min="1" max="99" value="1" maxlength="2">
+            
          </div>
+      <button type="submit" name="add_to_cart" class="cart-btn">add to cart</button>
+         
+         <!-- <button class="btn1">Add to wishlist</button> -->
       </form>
       <?php
             }

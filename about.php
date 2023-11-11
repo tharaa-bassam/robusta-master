@@ -27,6 +27,8 @@ if(isset($_SESSION['user_id'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="css/components.css">
+
 
 </head>
 <body>
@@ -57,6 +59,23 @@ if(isset($_SESSION['user_id'])){
       </div>
 
    </div>
+
+
+
+
+   <div class="row">
+
+
+
+<div class="content">
+   <h3>why choose us?</h3>
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, neque debitis incidunt qui ipsum sed doloremque a molestiae in veritatis ullam similique sunt aliquam dolores dolore? Quasi atque debitis nobis!</p>
+   <a href="menu.html" class="btn">our menu</a>
+</div>
+<div class="image">
+   <img src="images/about2.png" alt="">
+</div>
+</div>
 
 </section>
 
