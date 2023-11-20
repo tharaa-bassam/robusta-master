@@ -73,9 +73,13 @@ if(isset($_POST['submit'])){
 <!-- header section ends -->
 
 <section class="form-container">
+     <img src="images/login.jpg" alt="User Image" style="width: 100%; border-bottom: 1px solid #ddd;">
 
    <form action="" method="post">
+   <!-- <img src="images/login.jpg" alt="User Image" style="width: 100%; border-bottom: 1px solid #ddd;"> -->
+
       <h3>register now</h3>
+      
       <input type="text" name="name" required placeholder="enter your name" class="box" maxlength="50">
       <input type="email" name="email" required placeholder="enter your email" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="number" name="number" required placeholder="enter your number" class="box" min="0" max="9999999999" maxlength="10">
@@ -86,6 +90,7 @@ if(isset($_POST['submit'])){
    </form>
 
 </section>
+
 
 
 

@@ -67,7 +67,8 @@ if (isset($_POST['update'])) {
 
 <body>
 
-   <?php include '../components/admin_header.php' ?>
+   <?php 
+   // include '../components/admin_header.php' ?>
 
    <!-- update product section starts  -->
 

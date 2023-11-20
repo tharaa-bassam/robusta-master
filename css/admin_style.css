@@ -8,7 +8,7 @@
    --white:#fff;
    --light-bg:#f5f5f5;
    --light-color:#999;
-   --border:.2rem solid var(--black);
+   --border:1px solid #ccc;
    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
 }
 
@@ -190,10 +190,10 @@ section{
 .header{
    position: sticky;
    top:0; left:0; right:0;
-   background-color: var(--white);
+   background-color: #1e1e1e;
    box-shadow: var(--box-shadow);
    z-index: 1000;
-   border-bottom: var(--border);
+  
 }
 
 .header .flex{
@@ -215,7 +215,7 @@ section{
 .header .flex .navbar a{
    margin:0 1rem;
    font-size: 2rem;
-   color:var(--light-color);
+   color:#1e1e1e;
 }
 
 .header .flex .navbar a:hover{
@@ -267,7 +267,7 @@ section{
 #menu-btn{
    display: none;
 }
-
+/* 
 .dashboard .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
@@ -303,7 +303,81 @@ section{
    border:var(--border);
    margin:1rem 0;
    color:var(--light-color);
+} */
+
+
+
+.dashboard {
+   margin: 2rem 5rem 2rem 30rem;
+   background-color: #f4f4f4;
+   padding: 40px 0;
 }
+
+.heading {
+   text-align: center;
+   font-size: 2rem;
+   margin-bottom: 30px;
+}
+
+.box-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+.box {
+   background-color: #fff;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   text-align: center;
+   margin: 15px;
+   width: 250px;
+   transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+   transform: scale(1.05);
+}
+
+h3 {
+   font-size: 2rem;
+   margin-bottom: 10px;
+}
+
+span {
+   font-size: 1.5rem;
+   font-weight: bold;
+   margin: 0 5px;
+}
+
+p {
+   color: #666;
+   margin-bottom: 15px;
+}
+
+.btn {
+   display: inline-block;
+   padding: 10px 20px;
+   text-decoration: none;
+   color: #fff;
+   background-color: #3498db;
+   border-radius: 5px;
+   transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+   background-color: #2980b9;
+}
+
+
+
+
+
+
+
+
+/***********************************/
 
 .add-products form{
    margin:0 auto;
@@ -311,7 +385,7 @@ section{
    background-color: var(--white);
    border-radius: .5rem;
    box-shadow: var(--box-shadow);
-   border:var(--border);
+   border: none;
    padding:2rem;
    text-align: center;
 }
@@ -325,7 +399,7 @@ section{
 
 .add-products form .box{
    background-color: var(--light-bg);
-   border:var(--border);
+   border:1px solid #ccc;
    width: 100%;
    padding:1.4rem;
    font-size: 1.8rem;
@@ -333,6 +407,16 @@ section{
    border-radius: .5rem;
    margin: 1rem 0;
 }
+
+
+
+
+
+
+
+
+
+
 
 .show-products .box-container{
    display: grid;
@@ -598,3 +682,6 @@ section{
    }
 
 }
+
+
+

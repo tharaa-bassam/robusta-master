@@ -59,6 +59,7 @@ section{
    margin-bottom: 2.5rem;
    font-size: 4rem;
    color:var(--black);
+   font-family: 'Kalam', cursive;
    text-transform: uppercase;
    text-decoration: underline;
    text-underline-offset: 1rem;
@@ -828,7 +829,12 @@ section{
 
 /* steps */
 
+.steps{
+   margin-top:4rem;
+}
+
 .steps .box-container{
+   margin-top:5rem;
    display: flex;
    flex-wrap: wrap;
    gap: 1.5rem;
@@ -1071,13 +1077,13 @@ section{
    color:var(--black);
 }
 
-.form-container form{
+/* .form-container form{
    border:var(--border);
    margin:0 auto;
    max-width: 50rem;
    padding:2rem;
    text-align: center;
-}
+} */
 
 .form-container form h3{
    font-size: 2.5rem;
@@ -1573,4 +1579,243 @@ section{
  /**********************************/
  
  
+ .form-container {
+   background-color: #fff;
+   border: 1px solid #dddddda1;
+   border-radius: 10px;
+   overflow: hidden;
+   width: 60rem;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+/* 
+.form-container form {
+   padding: 20px;
+} */
+
+.form-container h3 {
+   text-align: center;
+   color: #333;
+}
+
+/* .form-container.box {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 10px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   box-sizing: border-box;
+   font-size: 16px;
+} */
+
+.form-container .btn {
+   background-color: #e44d26;
+   color: white;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   width: 100%;
+   font-size: 16px;
+   transition: background-color 0.3s ease-in-out;
+}
+
+.form-container .btn:hover {
+   background-color: #333;
+}
+
+/* .form-container p {
+   text-align: center;
+   margin-top: 10px;
+}
+
+.form-container p a {
+   text-decoration: none;
+   color: #e44d26;
+} */
+/**************************************************************/
+
+
+/* gallery */
+
+.gallery {
+   text-align: center;
+}
+
+.section__title {
+   font-size: 2rem;
+   margin-bottom: 30px;
+   color: #333;
+}
+
+.gallery__container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 20px;
+}
+
+.gallery__img {
+   overflow: hidden;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery__img img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 8px;
+   transition: transform 0.3s ease-in-out;
+}
+
+.gallery__img:hover img {
+   transform: scale(1.1);
+}
  
+ /* ends */
+
+ /*about-2*/
+ .about-2 .box-container{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 6rem;
+ }
+ 
+ .about-2 .deco-title{
+   font-size: 10rem;
+   font-weight: 700;
+   white-space: nowrap;
+   line-height: 0.5;
+   color: transparent;
+   -webkit-text-fill-color: transparent;
+   -webkit-text-stroke: 1px rgb(204,204,204);
+   transform-origin: top left;
+   transform: rotate(0.25turn);
+   position: absolute;
+   top: 115%;
+   left: 48%;
+   z-index: -1;
+ }
+ 
+ .about-2 .box-container .image{
+   flex: 1 1 22rem;
+ }
+ 
+ .about-2 .box-container .image img{
+   width: 60rem;
+ }
+ 
+ .about-2 .content{
+   flex: 1 1 41rem;
+ }
+ 
+ /* .about-2 .content .title{
+   font-size: 4rem;
+   color: #1D212B;
+ } */
+ 
+ .about-2 .content p{
+   font-size: 1.7rem;
+   color: #444;
+   padding: 1rem 0;
+   line-height: 2;
+ }
+
+
+  /* barista section */
+
+
+  .barista {
+   text-align: center;
+   background: #f5f5f5;
+   padding: 30px 0;
+}
+
+.abut-header {
+   color: #444;
+   font-size: 24px;
+   margin-bottom: 20px;
+   font-family: var(--alt-font);
+}
+
+.sub-container {
+   max-width: 1200px;
+   margin: auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.teams {
+   margin: 10px;
+   padding: 20px;
+   max-width: 30%;
+   cursor: pointer;
+   transition: 0.4s;
+   box-sizing: border-box;
+   background: #fff;
+   border: none;
+  
+   border-radius: 8px;
+}
+
+.teams:hover {
+   background: #f9f9f9;
+   cursor: auto;
+}
+
+.teams img {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+}
+
+.name {
+   padding: 12px;
+   font-weight: bold;
+   font-size: 16px;
+   text-transform: uppercase;
+}
+
+.desig {
+   font-style: italic;
+   color: #888;
+}
+
+.breif {
+   margin: 20px 0;
+   font-weight: lighter;
+   color: #4e4e4e;
+}
+
+.barista .sub-container .teams .social-links {
+   margin: 14px;
+}
+
+.barista .sub-container .teams .social-links a {
+   display: inline-block;
+   height: 30px;
+   width: 30px;
+   transition: .4s;
+   margin-right: 10px;
+   color: var(--orange);
+   
+}
+
+.barista .sub-container .teams .social-links a:hover {
+   color: var(--black);
+   
+}
+
+.barista .sub-container .teams .social-links a i {
+   font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+   .teams {
+       max-width: 100%;
+   }
+}
+
+/* end */

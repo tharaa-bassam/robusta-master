@@ -38,10 +38,10 @@ if (isset($_GET['delete'])) {
    <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
    <style>
-      table {
+      /* table {
          width: 100%;
          max-width: 1200px;
-         /* Set a maximum width for the table */
+         
          border-collapse: collapse;
          margin-top: 2rem;
 
@@ -74,13 +74,81 @@ if (isset($_GET['delete'])) {
 
       tr:nth-child(odd) {
          background-color: var(--light-bg);
-      }
+      } */
+      table {
+    width: 70rem;
+    max-width: 1200px;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+th {
+    background-color: #19415B;
+    color: #fff;
+    font-size: 2rem;
+}
+
+td {
+    background-color: #ecf0f1;
+    font-size: 2rem;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #d4e6f1;
+}
+
+.delete-btn,
+.option-btn {
+    display: inline-block;
+    width:50%;
+    padding: 1px 5px;
+    margin: 0.2rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+.option-btn {
+    background-color: #2ecc71;
+}
+
+.delete-btn:hover,
+.option-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 600px) {
+    th,
+    td {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
    </style>
 </head>
 
 <body>
 
-   <?php include '../components/admin_header.php' ?>
+   <?php
+   //  include '../components/admin_header.php' ?>
    <?php include '../components/admin_slider.php'; ?>
    <!-- User accounts section starts  -->
 

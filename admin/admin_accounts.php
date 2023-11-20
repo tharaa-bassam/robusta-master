@@ -34,49 +34,80 @@ if (isset($_GET['delete'])) {
    <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
    <style>
-      table {
-         width: 100%;
-         max-width: 1200px;
-         /* Set a maximum width for the table */
-         border-collapse: collapse;
-         margin-top: 2rem;
+    table {
+    width: 70rem;
+    max-width: 1200px;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
 
-      }
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
 
-      th,
-      td {
-         border: 0.1rem solid black;
-         padding: 4rem;
-         text-align: center;
-      }
+th {
+    background-color: #19415B;
+    color: #fff;
+    font-size: 2rem;
+}
 
-      th {
-         background-color: #C0D6E4;
-         color: var(--white);
-         font-size: 1.5rem;
-         letter-spacing: 1px;
-         color: var(--black);
-      }
+td {
+    background-color: #ecf0f1;
+    font-size: 2rem;
+}
 
-      td {
-         background-color: var(--light-bg);
-         color: var(--black);
-         font-size: 1.5rem;
-      }
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
-      tr:nth-child(even) {
-         background-color: var(--white);
-      }
+tr:hover {
+    background-color: #d4e6f1;
+}
 
-      tr:nth-child(odd) {
-         background-color: var(--light-bg);
-      }
+.delete-btn,
+.btn-success {
+    display: inline-block;
+    width:50%;
+    padding: 1px 5px;
+    margin: 0.2rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+.btn-success {
+    background-color: #2ecc71;
+}
+
+.delete-btn:hover,
+.btn-success:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 600px) {
+    th,
+    td {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
    </style>
 </head>
 
 <body>
 
-   <?php include '../components/admin_header.php' ?>
+   <?php 
+   // include '../components/admin_header.php' ?>
    <?php include '../components/admin_slider.php'; ?>
    <!-- admins accounts section starts  -->
 

@@ -10,7 +10,12 @@ if (!isset($admin_id)) {
    header('location:admin_login.php');
 }
 
+
 ?>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,8 +36,10 @@ if (!isset($admin_id)) {
 
 <body>
 
-   <?php include '../components/admin_header.php';
-   include '../components/admin_slider.php'; ?>
+   <?php
+     include '../components/admin_slider.php';
+    include '../components/admin_header.php';
+    ?>
 
    <!-- admin dashboard section starts  -->
 
@@ -40,7 +47,7 @@ if (!isset($admin_id)) {
 
       <h1 class="heading">dashboard</h1>
 
-      <!-- <div class="box-container">
+      <div class="box-container">
 
          <div class="box">
             <h3>welcome!</h3>
@@ -131,7 +138,7 @@ if (!isset($admin_id)) {
             <a href="messages.php" class="btn">see messages</a>
          </div>
 
-      </div> -->
+      </div>
 
    </section>
 

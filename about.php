@@ -24,6 +24,7 @@ if(isset($_SESSION['user_id'])){
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <script src="https://kit.fontawesome.com/6487c144b2.js" crossorigin="anonymous"></script>
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="./css/style.css">
@@ -54,23 +55,25 @@ if(isset($_SESSION['user_id'])){
 
       <div class="content">
          <h3>why choose us?</h3>
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, neque debitis incidunt qui ipsum sed doloremque a molestiae in veritatis ullam similique sunt aliquam dolores dolore? Quasi atque debitis nobis!</p>
-         <a href="menu.html" class="btn">our menu</a>
+         <p>Robusta  was established  as a specialized cafe in the production and supply of premium coffee types chosen from the best coffees in the world. We believe that great coffee starts with the highest quality of green beans planted in the most famous farms of the world and given countless amounts of labor and love to ensure receiving an excellent product.
+
+</p>
       </div>
 
    </div>
 
 
-
+<br> <br> <br> <br> <br> <br> <br> 
 
    <div class="row">
 
 
 
 <div class="content">
-   <h3>why choose us?</h3>
-   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, neque debitis incidunt qui ipsum sed doloremque a molestiae in veritatis ullam similique sunt aliquam dolores dolore? Quasi atque debitis nobis!</p>
-   <a href="menu.html" class="btn">our menu</a>
+   <h3>Our Story</h3>
+   <p>
+   The aromas of coffee have captivated our senses and stolen our hearts for years. We’ve always been thinking that there is much more going on inside your daily cup of coffee than what meets the eye; we always found the journey of a coffee bean traveling from a farm to your mug inspiring; a journey that never ends and never grows old.
+   </p>
 </div>
 <div class="image">
    <img src="images/about2.png" alt="">
@@ -88,7 +91,7 @@ if(isset($_SESSION['user_id'])){
 
     <section class="steps">
 
-        <h1 class="title">how it <span>works</span></h1>
+        <h1 class="title">how it works</h1>
 
         <div class="box-container">
 
@@ -119,107 +122,64 @@ if(isset($_SESSION['user_id'])){
     <!-- steps section ends -->
 
 
+<!-- barista section start -->
 
+<section class="barista">
+    <div class="abut-header">
+        <h2 class="title">Our Team</h2>
+    </div>
+    <div class="sub-container">
+        <div class="teams">
+            <img src="images/barsta2.png" alt="">
+            <div class="name">rami</div>
+            <div class="desig">Barista</div>
+            <div class="breif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum labore quam
+                reprehenderit
+                vitae aliquam dicta! </div>
 
-<!-- reviews section starts  -->
-
-<!-- <section class="reviews">
-
-   <h1 class="title">customer's reivews</h1>
-
-   <div class="swiper reviews-slider">
-
-      <div class="swiper-wrapper">
-
-         <div class="swiper-slide slide">
-            <img src="images/pic-1.png" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
+            <div class="social-links">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+               
             </div>
-            <h3>john deo</h3>
-         </div>
+        </div>
 
-         <div class="swiper-slide slide">
-            <img src="images/pic-2.png" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
+        <div class="teams">
+            <img src="images/barsta1.png" alt="">
+            <div class="name">layla </div>
+            <div class="desig">Barista</div>
+            <div class="breif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum labore quam
+                reprehenderit
+                vitae aliquam dicta! </div>
+
+            <div class="social-links">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+               
             </div>
-            <h3>john deo</h3>
-         </div>
+        </div>
 
-         <div class="swiper-slide slide">
-            <img src="images/pic-3.png" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
+        <div class="teams">
+            <img src="images/barsta3.jpg" alt="">
+            <div class="name">sahar </div>
+            <div class="desig">Barista</div>
+            <div class="breif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum labore quam
+                reprehenderit
+                vitae aliquam dicta! </div>
+
+            <div class="social-links">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+               
             </div>
-            <h3>john deo</h3>
-         </div>
+        </div>
+    </div>
+</section>
 
-         <div class="swiper-slide slide">
-            <img src="images/pic-4.png" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
-            </div>
-            <h3>john deo</h3>
-         </div>
-
-         <div class="swiper-slide slide">
-            <img src="images/pic-5.png" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
-            </div>
-            <h3>john deo</h3>
-         </div>
-
-         <div class="swiper-slide slide">
-            <img src="images/pic-6.png" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
-            </div>
-            <h3>john deo</h3>
-         </div>
-
-      </div>
-
-      <div class="swiper-pagination"></div>
-
-   </div>
-
-</section> -->
-
-<!-- reviews section ends -->
-
-
+<!-- end -->
 
 
 
@@ -239,7 +199,7 @@ if(isset($_SESSION['user_id'])){
 
 <!-- footer section starts  -->
 <?php include 'components/footer.php'; ?>
-<!-- footer section ends -->=
+<!-- footer section ends -->
 
 
 

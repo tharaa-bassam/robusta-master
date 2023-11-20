@@ -68,12 +68,19 @@ if (isset($_GET['delete'])) {
       }
 
       .gray-table th {
-         background-color: #333;
+         background-color: #19415B;
          /* Dark gray header background */
          color: white;
       }
+      .drop-down {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+   }
+
    </style>
-   <?php include '../components/admin_header.php' ?>
+   <?php 
+   // include '../components/admin_header.php' ?>
    <?php include '../components/admin_slider.php'; ?>
    <!-- placed orders section starts  -->
 

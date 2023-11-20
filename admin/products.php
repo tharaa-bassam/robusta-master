@@ -75,49 +75,59 @@ if (isset($_GET['delete'])) {
    <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
    <style>
-      .admin-table {
-         width: 100%;
-         border-collapse: collapse;
-         margin-top: 2rem;
-      }
+     .admin-table {
+            width: 70rem;
+            border-collapse: collapse;
+            margin-top: 20px;
+         }
 
-      .admin-table th,
-      .admin-table td {
-         border: var(--border);
-         padding: 1rem;
-         text-align: center;
-      }
+         .admin-table th, .admin-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            background-color: #ecf0f1;
+         }
 
-      .admin-table th {
-         background-color: var(--main-color);
-         color: var(--white);
-      }
+         .admin-table th {
+            background-color: #19415B;
+            color: #fff;
+         }
 
-      .admin-table td {
-         background-color: var(--light-bg);
-         color: var(--black);
-      }
+         .admin-table img {
+            max-width: 50px;
+            max-height: 50px;
+            border-radius: 5px;
+         }
 
-      .admin-table tr:nth-child(even) {
-         background-color: var(--white);
-      }
+         .option-btn, .delete-btn {
+            display: inline-block;
+    width:50%;
+    padding: 1px 5px;
+    margin: 0.2rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+         }
 
-      .admin-table tr:nth-child(odd) {
-         background-color: var(--light-bg);
-      }
+         .option-btn:hover, .delete-btn:hover {
+            background-color: #c0392b;
+         }
 
-      /* Adjust the size of product images */
-      .admin-table img {
-         max-width: 100px;
-         /* Adjust the width as needed */
-         height: auto;
-      }
+         .empty {
+            text-align: center;
+            padding: 10px;
+            color: #888;
+         }
+       
    </style>
 </head>
 
 <body>
 
-   <?php include '../components/admin_header.php' ?>
+   <?php
+   //  include '../components/admin_header.php' ?>
    <?php include '../components/admin_slider.php'; ?>
 
    <!-- add products section starts  -->

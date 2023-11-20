@@ -23,6 +23,10 @@ include 'components/add_cart.php';
    <title>home</title>
 
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+      <!-- Google Web Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Itim&family=Kalam:wght@400;700&family=Merriweather:wght@300;700&family=Poppins:wght@200;300&family=Quicksand&family=Raleway:wght@300;400&family=Shadows+Into+Light&family=Yellowtail&display=swap" rel="stylesheet">
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -92,84 +96,7 @@ include 'components/add_cart.php';
 
 
 
-<!-- <section class="hero">
 
-   <div class="swiper hero-slider">
-
-      <div class="swiper-wrapper">
-
-         <div class="swiper-slide slide">
-            <div class="content">
-               <span>order online</span>
-               <h3>delicious pizza</h3>
-               <a href="menu.html" class="btn">see menus</a>
-            </div>
-            <div class="image">
-               <img src="images/home-1.jpg" alt="">
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <div class="content">
-               <span>order online</span>
-               <h3>chezzy hamburger</h3>
-               <a href="menu.html" class="btn">see menus</a>
-            </div>
-            <div class="image">
-               <img src="images/home-img-2.png" alt="">
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <div class="content">
-               <span>order online</span>
-               <h3>rosted chicken</h3>
-               <a href="menu.html" class="btn">see menus</a>
-            </div>
-            <div class="image">
-               <img src="images/home-img-3.png" alt="">
-            </div>
-         </div>
-
-      </div>
-
-      <div class="swiper-pagination"></div>
-
-   </div>
-
-</section> -->
-
-<!-- <section class="category">
-
-   <h1 class="title">food category</h1>
-
-   <div class="box-container">
-
-      <a href="category.php?category=fast food" class="box">
-         <img src="images/cat-1.jpg" alt="">
-         <h3>fast food</h3>
-      </a>
-
-      <a href="category.php?category=main dish" class="box">
-         <img src="images/cat-2.png" alt="">
-         <h3>main dishes</h3>
-      </a>
-
-      <a href="category.php?category=drinks" class="box">
-         <img src="images/cat-3.png" alt="">
-         <h3>drinks</h3>
-      </a>
-
-      <a href="category.php?category=desserts" class="box">
-         <img src="images/cat-4.png" alt="">
-         <h3>desserts</h3>
-      </a>
-
-   </div>
-
-</section> -->
-
- <!-- banner section starts -->
 
  <section class="category">
 
@@ -241,12 +168,12 @@ include 'components/add_cart.php';
 
 <section class="products">
 
-   <h1 class="title">latest dishes</h1>
+   <h1 class="title">latest Coffee</h1>
 
    <div class="box-container">
 
       <?php
-         $select_products = $conn->prepare("SELECT * FROM `products` LIMIT 6");
+         $select_products = $conn->prepare("SELECT * FROM `products` LIMIT 3");
          $select_products->execute();
          if($select_products->rowCount() > 0){
             while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
@@ -286,7 +213,76 @@ include 'components/add_cart.php';
 </section>
 
 
+    <!-- about -->
 
+    <section class="about-2" id="about">
+
+<!-- <h2 class="deco-title">About us</h2> -->
+
+<div class="box-container">
+
+    <div class="image">
+        <img src="images/Breakroom-Blob02-coffe.png" alt="">
+    </div>
+
+    <div class="content">
+        <h1 class="title">Start your day with a cup of Robusta coffee</h1>
+        <p>
+        To share our customers’ daily moments by providing perfect, delicious and inspirational coffee. Guarantee that the quality of coffee we produce meets international standards. To be the leading Coffee providers in Jordan and To become the most trusted as the perfect coffee business partner and the leader in the local,regional and global market.
+        </p>
+        
+        <div >
+            <a href="about.php" class="btn">Read More</a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- end -->
+
+
+
+
+
+
+
+     <!-- gallery section starts -->
+
+     <section class="gallery section" id="gallery">
+            <h2 class="title">Gallery</h2>
+
+            <div class="gallery__container container grid">
+                <div class="gallery__img">
+                    <img src="images/g1.jpg" alt="">
+                </div>
+                <div class="gallery__img">
+                    <img src="images/g2.jpg" alt="">
+                </div>
+                <div class="gallery__img">
+                    <img src="images/g9.jpg" alt="">
+                </div>
+                <div class="gallery__img">
+                    <img src="images/g4.jpg" alt="">
+                </div>
+                <div class="gallery__img">
+                    <img src="images/g5.jpg" alt="">
+                </div>
+                <div class="gallery__img">
+                    <img src="images/g6.jpg" alt="">
+                </div>
+                <div class="gallery__img">
+                    <img src="images/g7.jpg" alt="">
+                </div>
+                <div class="gallery__img">
+                    <img src="images/g8.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+<!-- gallery section ends -->
 
 
 

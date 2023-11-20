@@ -46,6 +46,7 @@ Notes:	decreasing heading by 0.4em with every subsequent heading level
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 ul {
@@ -1576,7 +1577,7 @@ section {
     vertical-align: middle;
 }
 
-.menu-sidebar {
+/* .menu-sidebar {
     width: 300px;
     position: fixed;
     left: 0;
@@ -1646,7 +1647,81 @@ section {
 
 .navbar-sidebar .navbar__list li.active > a {
     color: #4272d7;
+} */
+.menu-sidebar {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 230px;
+    background-color: #1e1e1e;
+    color: #fff;
+    overflow-y: auto;
+    z-index: 2;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
 }
+
+.logo {
+    padding: 20px;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.menu-sidebar__content {
+    padding-top: 20px;
+}
+
+.navbar-sidebar {
+    padding-left: 20px;
+}
+
+.navbar__list {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar__list a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.navbar__list a:hover {
+    background-color: #333;
+}
+
+/* Active link style */
+.active a {
+    background-color: #333;
+}
+
+/* Scrollbar styles */
+.js-scrollbar1 {
+    overflow: hidden;
+    position: relative;
+}
+
+.js-scrollbar1::-webkit-scrollbar {
+    width: 6px;
+}
+
+.js-scrollbar1::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+}
+
+.js-scrollbar1::-webkit-scrollbar-track {
+    background-color: #1e1e1e;
+}
+
+
+
+
 
 .has-sub {
     position: relative;
@@ -2143,7 +2218,9 @@ section {
     align-items: center;
     background: #365cad;
     padding: 0 35px;
+    
 }
+
 
 @media (max-width: 991px) {
     .menu-sidebar2 {
@@ -14678,4 +14755,10 @@ section {
     .menu-sidebar .navbar-sidebar ul li {
         margin-bottom: 10px; /* Add spacing between menu items on smaller screens */
     }
+}
+
+
+.logo img {
+    max-width: 100%;
+    border-radius: 5rem; /* Adjust the value based on your preference */
 }
