@@ -57,21 +57,21 @@ include 'components/add_cart.php';
         <div class="swiper-slide slide" style="background: url(images/home-1.jpg) no-repeat;">
             <div class="content">
                 <h3>the <span>tastiest</span> coffe <br> on the planet</h3>
-                <a href="#" class="btn">order now</a>
+                <a href="menu.php" class="btn">order now</a>
             </div>
         </div>
 
         <div class="swiper-slide slide" style="background: url(images/home-4.jpg) no-repeat;">
             <div class="content">
                 <h3>the <span>tastiest</span> coffe <br> on the planet</h3>
-                <a href="#" class="btn">order now</a>
+                <a href="menu.php" class="btn">order now</a>
             </div>
         </div>
 
         <div class="swiper-slide slide" style="background: url(images/home-3.jpg) no-repeat;">
             <div class="content">
                 <h3>the <span>tastiest</span> coffe <br> on the planet</h3>
-                <a href="#" class="btn">order now</a>
+                <a href="menu.php" class="btn">order now</a>
             </div>
         </div>
 
@@ -89,7 +89,28 @@ include 'components/add_cart.php';
 
 
 
+   <!-- about -->
 
+   <section class="about-us">
+        <div class="content-container">
+            <div class="image">
+                <img src="images/Breakroom-Blob02-coffe.png" alt="About Us Image">
+            </div>
+            <div class="content">
+                <h1 class="title">Start your day with a cup of Robusta coffee</h1>
+                <p>
+                    Welcome to our Robusta cafe ! We are dedicated to providing you with the finest coffee experience. Our passion for quality coffee is matched only by our commitment to excellent service. From the bean to the cup, we strive for perfection in every sip.To share our customers’ daily moments by providing perfect, delicious coffee. Guarantee that the quality of coffee we produce. To be the leading Coffee providers in Jordan.
+                </p>
+                <div >
+            <a href="about.php" class="btn">Read More</a>
+
+    </div>
+
+            </div>
+            
+        </div>
+    </section>
+<!-- end -->
 
 
 
@@ -100,7 +121,7 @@ include 'components/add_cart.php';
 
  <section class="category">
 
- <h1 class="title">OUR COFFEE</h1>
+ <h1 class="title">OUR Categories</h1>
 
 
 <div class="box-container">
@@ -109,58 +130,60 @@ include 'components/add_cart.php';
 
 
 
-      <a href="category.php?category=Dessert" class="box">
-    <div class="box">
-        <div class="image">
-            <img src="images/cat-4.jpg" alt="">
-        </div>
-        <div class="content">
-            <h3>iced coffe</h3>
-        </div>
-    </div>
-    </a>
-
-
-
-    <a href="category.php?category=Machine" class="box">
-    <div class="box">
-        <div class="image">
-            <img src="images/cat-3.jpg" alt="">
-        </div>
-        <div class="content">
-            <h3>dessert</h3>
-        </div>
-    </div>
-     </a>
 
 
 
 
-     <a href="category.php?category=Drinks" class="box">
-    <div class="box">
-        <div class="image">
-            <img src="images/cat-1.jpg" alt="">
-        </div>
-        <div class="content">
-            <h3>Milkshakes</h3>
-        </div>
-    </div>
-</a>
+<?php
+      $select_categories = $conn->prepare("SELECT * FROM categories ");
+      $select_categories->execute();
+      if($select_categories->rowCount() > 0){
+         while($fetch_categories = $select_categories->fetch(PDO::FETCH_ASSOC)){
+            $category_id = $fetch_categories['id'];
+            $category_name = $fetch_categories['name'];
+            $category_image = $fetch_categories['image'];
+   ?>
+      <div class="box">
+         <img src="uploaded_img/<?= $category_image; ?>" alt="">
+         <a href="category.php?category=<?= $category_name; ?>" class="btn"><?= $category_name; ?></a>
+      </div>
 
 
-<a href="category.php?category=Beans" class="box">
 
-    <div class="box">
-        <div class="image" style="height: 54rem;" >
-            <img src="images/cat-5.jpg" alt="">
-        </div>
-        <div class="content">
-            <h3>Hot Drinks</h3>
-        </div>
-    </div>
+      <?php
+      }
+   }else{
+      echo '<p class="empty">no products added yet!</p>';
+   }
+   ?>
+   </div>
 
-</div>
-</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </section>
 
 <!-- banner section ends -->
@@ -183,19 +206,19 @@ include 'components/add_cart.php';
          <input type="hidden" name="name" value="<?= $fetch_products['name']; ?>">
          <input type="hidden" name="price" value="<?= $fetch_products['price']; ?>">
          <input type="hidden" name="image" value="<?= $fetch_products['image']; ?>">
-         <a href="quick_view.php?pid=<?= $fetch_products['id']; ?>" class="fas fa-eye"></a>
+         <a href="quick_view.php?pid=<?= $fetch_products['id']; ?>" class="fa-regular fa-eye"></a>
          <!-- <button type="submit" class="fas fa-shopping-cart" name="add_to_cart"></button> -->
          <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
          <a href="category.php?category=<?= $fetch_products['category']; ?>" class="cat"><?= $fetch_products['category']; ?></a>
          <div class="name"><?= $fetch_products['name']; ?></div>
          <div class="flex">
-            <div class="price"><span>$</span><?= $fetch_products['price']; ?></div>
+            <div class="price"><?= $fetch_products['price']; ?><span>JD</span></div>
             <input type="number" name="qty" class="qty" min="1" max="99" value="1" maxlength="2">
             
          </div>
       <button type="submit" name="add_to_cart" class="cart-btn">add to cart</button>
          
-         <!-- <button class="btn1">Add to wishlist</button> -->
+        
       </form>
       <?php
             }
@@ -213,35 +236,7 @@ include 'components/add_cart.php';
 </section>
 
 
-    <!-- about -->
-
-    <section class="about-2" id="about">
-
-<!-- <h2 class="deco-title">About us</h2> -->
-
-<div class="box-container">
-
-    <div class="image">
-        <img src="images/Breakroom-Blob02-coffe.png" alt="">
-    </div>
-
-    <div class="content">
-        <h1 class="title">Start your day with a cup of Robusta coffee</h1>
-        <p>
-        To share our customers’ daily moments by providing perfect, delicious and inspirational coffee. Guarantee that the quality of coffee we produce meets international standards. To be the leading Coffee providers in Jordan and To become the most trusted as the perfect coffee business partner and the leader in the local,regional and global market.
-        </p>
-        
-        <div >
-            <a href="about.php" class="btn">Read More</a>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- end -->
+ 
 
 
 

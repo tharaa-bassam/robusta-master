@@ -126,9 +126,9 @@ if (isset($_GET['delete'])) {
 
 <body>
 
-   <?php
-   //  include '../components/admin_header.php' ?>
-   <?php include '../components/admin_slider.php'; ?>
+<?php
+ include '../components/admin_slider.php'; ?>
+<?php include '../components/admin_header.php' ?>
 
    <!-- add products section starts  -->
 
@@ -139,11 +139,18 @@ if (isset($_GET['delete'])) {
          <input type="text" required placeholder="enter product name" name="name" maxlength="100" class="box">
          <input type="number" min="0" max="9999999999" required placeholder="enter product price" name="price" onkeypress="if(this.value.length == 10) return false;" class="box">
          <select name="category" class="box" required>
-            <option value="" disabled selected>select category --</option>
-            <option value="Drinks">Drinks</option>
-            <option value="Dessert">Desserts</option>
-            <option value="Machine">Machine</option>
-            <option value="Beans">Beans</option>
+            <option value="" selected disabled>select category</option>
+            <?php
+            // Retrieve categories from the database
+            $select_categories = $conn->prepare("SELECT * FROM categories");
+            $select_categories->execute();
+            $categories = $select_categories->fetchAll(PDO::FETCH_ASSOC);
+
+            // Generate the category options
+            foreach ($categories as $category) {
+               echo '<option value="' . $category['name'] . '">' . $category['name'] . '</option>';
+            }
+            ?>
          </select>
          <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png, image/webp" required>
          <input type="submit" value="add product" name="add_product" class="btn">
@@ -175,7 +182,7 @@ if (isset($_GET['delete'])) {
                   echo '<td><img src="../uploaded_img/' . $fetch_products['image'] . '" alt="' . $fetch_products['name'] . '"></td>';
                   echo '<td>' . $fetch_products['name'] . '</td>';
                   echo '<td>' . $fetch_products['category'] . '</td>';
-                  echo '<td>$' . $fetch_products['price'] . '/-</td>';
+                  echo '<td>' . $fetch_products['price'] . 'JD </td>';
                   echo '<td>';
                   echo '<a href="update_product.php?update=' . $fetch_products['id'] . '" class="option-btn">Update</a>';
                   echo '<a href="products.php?delete=' . $fetch_products['id'] . '" class="delete-btn" onclick="return confirm(\'Delete this product?\');">Delete</a>';

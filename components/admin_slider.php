@@ -42,7 +42,7 @@
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
+                        <a class="logo" href="dashboard.php">
                             <img src="images/icon/logo.png" alt="CoolAdmin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
@@ -85,7 +85,7 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
+                <a href="dashboard.php">
                     <img style="margin-top: 5rem;"  src="images/icon/logo-admin.png" alt="Cool Admin" />
                 </a>
             </div>
@@ -110,6 +110,12 @@
                             <a href="products.php">
                                 <i class="fa fa-barcode"></i>products</a>
                         </li>
+
+                        <li>
+                            <a href="categories.php">
+                                <i class="fa fa-barcode"></i>Categories</a>
+                        </li>
+
                         <li>
                             <a href="admin_accounts.php">
                                 <i class="fa fa-users"></i>admin</a>
@@ -126,3 +132,4 @@
             </div>
         </aside>
         <!-- END MENU SIDEBAR-->
+</body>

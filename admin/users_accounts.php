@@ -147,9 +147,8 @@ tr:hover {
 
 <body>
 
-   <?php
-   //  include '../components/admin_header.php' ?>
-   <?php include '../components/admin_slider.php'; ?>
+<?php include '../components/admin_slider.php'; ?>
+<?php include '../components/admin_header.php' ?>
    <!-- User accounts section starts  -->
 
    <section class="accounts">
@@ -173,7 +172,7 @@ tr:hover {
                   echo '<td>' . $fetch_accounts['name'] . '</td>';
                   echo '<td>';
                   echo '<a href="users_accounts.php?delete=' . $fetch_accounts['id'] . '" class="delete-btn" onclick="return confirm(\'Delete this account?\');">Delete</a>';
-                  echo '<a href="update_user_to_admin.php?id=' . $fetch_accounts['id'] . '" class="option-btn">Update to Admin</a>';
+                 
                   echo '</td>';
                   echo '</tr>';
                }
@@ -187,7 +186,8 @@ tr:hover {
    </section>
 
    <!-- Rest of your code... -->
-
+ <!-- custom js file link  -->
+ <script src="../js/admin_script.js"></script>
 </body>
 
 </html>

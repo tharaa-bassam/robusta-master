@@ -79,9 +79,8 @@ if (isset($_GET['delete'])) {
    }
 
    </style>
-   <?php 
-   // include '../components/admin_header.php' ?>
    <?php include '../components/admin_slider.php'; ?>
+<?php include '../components/admin_header.php' ?>
    <!-- placed orders section starts  -->
 
 

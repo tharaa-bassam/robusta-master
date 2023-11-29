@@ -89,9 +89,8 @@ if (isset($_GET['delete'])) {
 
 <body>
 
-   <?php
-   //  include '../components/admin_header.php' ?>
-   <?php include '../components/admin_slider.php'; ?>
+<?php include '../components/admin_slider.php'; ?>
+<?php include '../components/admin_header.php' ?>
    <!-- messages section starts  -->
 
    <section class="messages">

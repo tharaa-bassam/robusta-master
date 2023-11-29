@@ -93,12 +93,19 @@ if (isset($_POST['update'])) {
                <input type="number" min="0" max="9999999999" required placeholder="enter product price" name="price" onkeypress="if(this.value.length == 10) return false;" class="box" value="<?= $fetch_products['price']; ?>">
                <span>update category</span>
                <select name="category" class="box" required>
-                  <option selected value="<?= $fetch_products['category']; ?>"><?= $fetch_products['category']; ?></option>
-                  <option value="table"> Drinks</option>
-                  <option value="chairs">Desserts</option>
-                  <option value="pillows">Machine</option>
-                  <option value="closet">Beans</option>
-               </select>
+            <option value="" selected disabled>select category</option>
+            <?php
+            // Retrieve categories from the database
+            $select_categories = $conn->prepare("SELECT * FROM categories");
+            $select_categories->execute();
+            $categories = $select_categories->fetchAll(PDO::FETCH_ASSOC);
+
+            // Generate the category options
+            foreach ($categories as $category) {
+               echo '<option value="' . $category['name'] . '">' . $category['name'] . '</option>';
+            }
+            ?>
+         </select>
                <span>update image</span>
                <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png, image/webp">
                <div class="flex-btn">

@@ -106,9 +106,8 @@ tr:hover {
 
 <body>
 
-   <?php 
-   // include '../components/admin_header.php' ?>
-   <?php include '../components/admin_slider.php'; ?>
+<?php include '../components/admin_slider.php'; ?>
+<?php include '../components/admin_header.php' ?>
    <!-- admins accounts section starts  -->
 
    <section class="accounts">
@@ -145,3 +144,8 @@ tr:hover {
             echo '<p class="empty">No accounts available</p>';
          }
          ?>
+
+            <!-- custom js file link  -->
+   <script src="../js/admin_script.js"></script>
+
+</body>

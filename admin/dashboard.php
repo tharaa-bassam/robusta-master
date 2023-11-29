@@ -30,7 +30,8 @@ if (!isset($admin_id)) {
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="../css/admin_style.css">
+   <link rel="stylesheet" href="../css/admin_style.css">	
+   
 
 </head>
 
@@ -64,7 +65,7 @@ if (!isset($admin_id)) {
                $total_pendings += $fetch_pendings['total_price'];
             }
             ?>
-            <h3><span>$</span><?= $total_pendings; ?><span>/-</span></h3>
+            <h3><?= $total_pendings; ?><span>JD</span></h3>
             <p>total pendings</p>
             <a href="placed_orders.php" class="btn">see orders</a>
          </div>
@@ -78,7 +79,7 @@ if (!isset($admin_id)) {
                $total_completes += $fetch_completes['total_price'];
             }
             ?>
-            <h3><span>$</span><?= $total_completes; ?><span>/-</span></h3>
+            <h3><?= $total_completes; ?><span>JD</span></h3>
             <p>total completes</p>
             <a href="placed_orders.php" class="btn">see orders</a>
          </div>
@@ -104,6 +105,20 @@ if (!isset($admin_id)) {
             <p>products added</p>
             <a href="products.php" class="btn">see products</a>
          </div>
+
+         <div class="box">
+            <?php
+            $select_categories = $conn->prepare("SELECT * FROM `categories`");
+            $select_categories->execute();
+            $numbers_of_categories = $select_categories->rowCount();
+            ?>
+            <h3><?= $numbers_of_categories; ?></h3>
+            <p>categories added</p>
+            <a href="categories.php" class="btn">see categories</a>
+         </div>
+
+
+
 
          <div class="box">
             <?php

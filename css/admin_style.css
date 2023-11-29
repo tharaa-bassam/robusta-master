@@ -408,6 +408,36 @@ p {
    margin: 1rem 0;
 }
 
+/* add categories */
+
+.add-categories form{
+   margin:0 auto;
+   max-width: 50rem;
+   background-color: var(--white);
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   border: none;
+   padding:2rem;
+   text-align: center;
+}
+
+.add-categories form h3{
+   margin-bottom: 1rem;
+   font-size: 2.5rem;
+   color:var(--black);
+   text-transform: capitalize;
+}
+
+.add-categories form .box{
+   background-color: var(--light-bg);
+   border:1px solid #ccc;
+   width: 100%;
+   padding:1.4rem;
+   font-size: 1.8rem;
+   color:var(--black);
+   border-radius: .5rem;
+   margin: 1rem 0;
+}
 
 
 
@@ -505,6 +535,51 @@ p {
    font-size: 1.7rem;
    color:var(--black);
 }
+/*update categories*/
+
+.update-category form{
+   margin:0 auto;
+   max-width: 50rem;
+   background-color: var(--white);
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   border:var(--border);
+   padding:2rem;
+}
+
+.update-category form img{
+   height: 25rem;
+   width: 100%;
+   object-fit: contain;
+}
+
+.update-category form .box{
+   background-color: var(--light-bg);
+   border:var(--border);
+   width: 100%;
+   padding:1.4rem;
+   font-size: 1.8rem;
+   color:var(--black);
+   border-radius: .5rem;
+   margin: 1rem 0;
+}
+
+.update-category form textarea{
+   height: 15rem;
+   resize: none;
+}
+
+.update-category form span{
+   font-size: 1.7rem;
+   color:var(--black);
+}
+
+
+
+
+
+
+
 
 .placed-orders .box-container{
    display: grid;
