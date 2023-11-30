@@ -37,7 +37,10 @@ include 'components/add_cart.php';
 
 <section class="products">
 
-   <h1 class="title">test</h1>
+
+
+
+<h1 class="title"><?php echo $_GET['category']; ?></h1>
 
    <div class="box-container">
 

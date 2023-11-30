@@ -78,31 +78,33 @@
   	 <div class="container">
   	 	<div class="row">
   	 		<div class="footer-col">
-  	 			<h4>company</h4>
+  	 			<h4>Quick Links</h4>
   	 			<ul>
+  	 				<li><a href="#">Home</a></li>
   	 				<li><a href="#">about us</a></li>
-  	 				<li><a href="#">our services</a></li>
   	 				<li><a href="#">privacy policy</a></li>
-  	 				<li><a href="#">affiliate program</a></li>
+  	 				<li><a href="#">contact</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
-  	 			<h4>get help</h4>
+  	 			<h4>Contact</h4>
   	 			<ul>
-  	 				<li><a href="#">FAQ</a></li>
-  	 				<li><a href="#">shipping</a></li>
-  	 				<li><a href="#">returns</a></li>
-  	 				<li><a href="#">order status</a></li>
-  	 				<li><a href="#">payment options</a></li>
+  	 				<li><a href="#">0775760416</a></li>
+  	 				<li><a href="#">+333-222-888</a></li>
+  	 				<li><a href="#">robustacafe@gmail.com</a></li>
+  	 				<li><a href="#">Jordan,Aqaba-122</a></li>
+  	 				
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
   	 			<h4>online shop</h4>
   	 			<ul>
-  	 				<li><a href="#">watch</a></li>
-  	 				<li><a href="#">bag</a></li>
-  	 				<li><a href="#">shoes</a></li>
-  	 				<li><a href="#">dress</a></li>
+  	 				<li><a href="http://localhost/robusta-master/category.php?category=Hot%20drinks">Hot Drinks</a></li>
+  	 				<li><a href="#">Beans</a></li>
+  	 				<li><a href="#">Desserts</a></li>
+  	 				<li><a href="#">Iced coffee</a></li>
+  	 				<li><a href="#">Milkshakes</a></li>
+
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
