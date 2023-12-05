@@ -1094,6 +1094,98 @@ section{
    color:var(--black);
 }
 
+
+
+/* .form-container {
+   display: flex;
+   max-width: 800px; 
+   width: 100%;
+   background-color: #fff;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+}
+
+.form-container form {
+   flex: 1;
+   padding: 20px;
+}
+
+.form-container img {
+   width: 100%;
+   max-width: 300px;
+   object-fit: cover;
+}
+
+.form-container form h3 {
+   text-align: center;
+   font-size: 20px; 
+   margin-bottom: 10px;
+}
+
+.form-container form input {
+   width: 100%;
+   padding: 12px; 
+   margin-bottom: 15px; 
+   box-sizing: border-box;
+   transition: box-shadow 0.3s ease; 
+   border: 1px solid #ddd; 
+
+
+}
+
+   
+   .form-container form input:focus {
+      outline: none; 
+      box-shadow: 0 0 5px rgba(81, 203, 238, 1); /
+  }
+
+
+
+.form-container form  .btn {
+
+   color: #fff;
+   padding: 12px; 
+   border: none;
+   cursor: pointer;
+}
+
+.form-container form p{
+   margin-top: 1.5rem;
+   font-size: 1.299rem;
+   color:var(--light-color);
+   font-weight: bold;
+}
+
+.form-container form p a{
+   color:var(--orange);
+   font-weight: bold;
+}
+
+.form-container form p a:hover{
+   text-decoration: underline;
+   font-weight: bold;
+   color:var(--black);
+} 
+
+@media (max-width: 600px) {
+   .form-container {
+       flex-direction: column;
+   }
+
+   .form-container  img {
+       max-width: 100%; 
+   }
+}
+
+@media (max-width: 400px) {
+   .form-container {
+       flex-direction: column;
+   }
+
+   .form-container  img {
+       max-width: 100%; 
+   }
+} */
 /* .form-container form{
    border:var(--border);
    margin:0 auto;
@@ -1102,35 +1194,59 @@ section{
    text-align: center;
 } */
 
-.form-container form h3{
+/* Common styles for all screen sizes */
+.form-container form h3 {
    font-size: 2.5rem;
-   color:var(--black);
+   color: var(--black);
    text-transform: uppercase;
    margin-bottom: 1rem;
+   text-align: center;
 }
 
-.form-container form .box{
-   margin:.7rem 0;
+.form-container form .box {
+   margin: 0.7rem 0;
    width: 100%;
-   border:var(--border);
-   padding:1.4rem;
+   border: var(--border);
+   padding: 1.4rem;
    font-size: 1.8rem;
-   color:var(--black);
+   color: var(--black);
 }
 
-.form-container form p{
+.form-container form p {
    margin-top: 1.5rem;
    font-size: 2rem;
-   color:var(--light-color);
+   color: var(--light-color);
 }
 
-.form-container form p a{
-   color:var(--black);
+.form-container form p a {
+   color: var(--black);
 }
 
-.form-container form p a:hover{
+.form-container form p a:hover {
    text-decoration: underline;
 }
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+   .form-container form {
+       padding: 1rem; /* Adjust padding for smaller screens */
+   }
+
+   .form-container form h3 {
+       font-size: 2rem; /* Decrease font size for smaller screens */
+   }
+
+   .form-container form .box {
+       padding: 1rem; /* Adjust padding for smaller screens */
+       font-size: 1.5rem; /* Decrease font size for smaller screens */
+   }
+
+   .form-container form p {
+       margin-top: 1rem; /* Adjust margin for smaller screens */
+       font-size: 1.8rem; /* Decrease font size for smaller screens */
+   }
+}
+
 /**************************************/
 
 .user-details .user{
@@ -1180,22 +1296,8 @@ section{
 
 
 
+/*****quick-view****/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*******************************************/
 .quick-view form{
    max-width: 40rem;
    padding:2rem;
@@ -1210,6 +1312,10 @@ section{
    object-fit: contain;
    margin-bottom: 1rem;
 }
+.quick-view .box {
+   font-size: 14px;
+   font-weight: 900;
+} 
 
 .quick-view form .cat{
    font-size: 1.8rem;
@@ -1560,7 +1666,7 @@ section{
 } */
 
 .form-container h3 {
-   text-align: center;
+   text-align: left;
    color: #333;
 }
 
@@ -1839,43 +1945,3 @@ section{
 
 /* end */
 
-/* review  */
-/* .about .flex{
-   max-width: 1200px;
-   margin:0 auto;
-   display: flex;
-   align-items: center;
-   flex-wrap: wrap;
-   gap:1.5rem;
-}
-
-.about .flex .image{
-   flex:1 1 40rem;
-}
-
-.about .flex .image img{
-   width: 100%;
-}
-
-.about .flex .content{
-   flex:1 1 40rem;
-   text-align: center;
-}
-
-.about .flex .content h3{
-   font-size: 3rem;
-   text-transform: capitalize;
-   color:var(--black);
-}
-
-.about .flex .content p{
-   padding:1rem 0;
-   font-size: 1.5rem;
-   color:var(--light-color);
-   line-height: 2;
-}
-
-.about .flex:nth-child(2){
-   margin:3rem auto;
-   flex-wrap: wrap-reverse;
-} */

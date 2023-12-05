@@ -26,3 +26,4 @@ subImages.forEach(images =>{
       mainImage.src = src;
    }
 });
+

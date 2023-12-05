@@ -27,6 +27,8 @@ if(isset($_SESSION['user_id'])){
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/components.css">
+     <!-- Favicon -->
+     <link rel="icon" href="images/android-chrome-512x512.png" type="image/x-icon">
 
 
 </head>
@@ -64,7 +66,7 @@ if(isset($_SESSION['user_id'])){
       <p>address : <span><?= $fetch_orders['address']; ?></span></p>
       <p>payment method : <span><?= $fetch_orders['method']; ?></span></p>
       <p>your orders : <span><?= $fetch_orders['total_products']; ?></span></p>
-      <p>total price : <span>$<?= $fetch_orders['total_price']; ?>/-</span></p>
+      <p>total price : <span><?= $fetch_orders['total_price']; ?>JD</span></p>
       <p> payment status : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; }; ?>"><?= $fetch_orders['payment_status']; ?></span> </p>
    </div>
    <?php

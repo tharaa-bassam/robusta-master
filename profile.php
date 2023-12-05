@@ -27,7 +27,8 @@ if(isset($_SESSION['user_id'])){
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/components.css">
-
+  <!-- Favicon -->
+  <link rel="icon" href="images/android-chrome-512x512.png" type="image/x-icon">
 
 </head>
 <body>

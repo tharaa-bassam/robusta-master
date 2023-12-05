@@ -28,8 +28,13 @@ include 'components/add_cart.php';
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/components.css">
+      <!-- Google Web Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Itim&family=Kalam:wght@400;700&family=Merriweather:wght@300;700&family=Poppins:wght@200;300&family=Quicksand&family=Raleway:wght@300;400&family=Shadows+Into+Light&family=Yellowtail&display=swap" rel="stylesheet">
 
-
+  <!-- Favicon -->
+  <link rel="icon" href="images/android-chrome-512x512.png" type="image/x-icon">
 </head>
 <body>
    
@@ -54,8 +59,12 @@ include 'components/add_cart.php';
       <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
       <a href="category.php?category=<?= $fetch_products['category']; ?>" class="cat"><?= $fetch_products['category']; ?></a>
       <div class="name"><?= $fetch_products['name']; ?></div>
+      <div class="description" ><?= $fetch_products['description']; ?></div>
+
       <div class="flex">
-         <div class="price"><span>$</span><?= $fetch_products['price']; ?></div>
+
+
+         <div class="price"><span></span><?= $fetch_products['price']; ?>JD</div>
          <input type="number" name="qty" class="qty" min="1" max="99" value="1" maxlength="2">
       </div>
       <button type="submit" name="add_to_cart" class="cart-btn">add to cart</button>

@@ -107,7 +107,7 @@ tr:hover {
 <body>
 
 <?php include '../components/admin_slider.php'; ?>
-<?php include '../components/admin_header.php' ?>
+
    <!-- admins accounts section starts  -->
 
    <section class="accounts">

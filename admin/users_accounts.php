@@ -38,48 +38,12 @@ if (isset($_GET['delete'])) {
    <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
    <style>
-      /* table {
-         width: 100%;
-         max-width: 1200px;
-         
-         border-collapse: collapse;
-         margin-top: 2rem;
-
-      }
-
-      th,
-      td {
-         border: 0.1rem solid black;
-         padding: 4rem;
-         text-align: center;
-      }
-
-      th {
-         background-color: #C0D6E4;
-         color: var(--white);
-         font-size: 1.5rem;
-         letter-spacing: 1px;
-         color: var(--black);
-      }
-
-      td {
-         background-color: var(--light-bg);
-         color: var(--black);
-         font-size: 1.5rem;
-      }
-
-      tr:nth-child(even) {
-         background-color: var(--white);
-      }
-
-      tr:nth-child(odd) {
-         background-color: var(--light-bg);
-      } */
-      table {
-    width: 70rem;
-    max-width: 1200px;
+    
+    .admin-table {
+    width: 100%;
     border-collapse: collapse;
     margin-top: 2rem;
+    /* margin-right: 3rem; */
 }
 
 th,
@@ -90,14 +54,14 @@ td {
 }
 
 th {
-    background-color: #19415B;
+    background-color: #3498db;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 td {
     background-color: #ecf0f1;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 tr:nth-child(even) {
@@ -110,10 +74,10 @@ tr:hover {
 
 .delete-btn,
 .option-btn {
-    display: inline-block;
-    width:50%;
-    padding: 1px 5px;
-    margin: 0.2rem;
+    display: inline;
+    width: 50%;
+    padding: 1px 18px;
+    margin: 5px;
     text-decoration: none;
     color: #fff;
     border-radius: 5px;
@@ -123,6 +87,8 @@ tr:hover {
 
 .delete-btn {
     background-color: #e74c3c;
+    /* padding: 8px 33px; */
+   
 }
 
 .option-btn {
@@ -148,7 +114,7 @@ tr:hover {
 <body>
 
 <?php include '../components/admin_slider.php'; ?>
-<?php include '../components/admin_header.php' ?>
+
    <!-- User accounts section starts  -->
 
    <section class="accounts">
@@ -158,8 +124,10 @@ tr:hover {
       <div class="box-container">
          <table class="admin-table">
             <tr>
-               <th>User ID</th>
                <th>Username</th>
+               <th>email</th>
+               <th>password</th>
+
                <th>Actions</th>
             </tr>
             <?php
@@ -168,8 +136,10 @@ tr:hover {
             if ($select_account->rowCount() > 0) {
                while ($fetch_accounts = $select_account->fetch(PDO::FETCH_ASSOC)) {
                   echo '<tr>';
-                  echo '<td>' . $fetch_accounts['id'] . '</td>';
                   echo '<td>' . $fetch_accounts['name'] . '</td>';
+                  echo '<td>' . $fetch_accounts['email'] . '</td>';
+                  echo '<td>' . $fetch_accounts['password'] . '</td>';
+
                   echo '<td>';
                   echo '<a href="users_accounts.php?delete=' . $fetch_accounts['id'] . '" class="delete-btn" onclick="return confirm(\'Delete this account?\');">Delete</a>';
                  

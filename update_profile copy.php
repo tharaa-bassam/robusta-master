@@ -73,7 +73,8 @@ if(isset($_POST['submit'])){
    <link rel="stylesheet" href="../css/admin_style.css">
    <link rel="stylesheet" href="css/components.css">
 
-
+  <!-- Favicon -->
+  <link rel="icon" href="images/android-chrome-512x512.png" type="image/x-icon">
 </head>
 <body>
 

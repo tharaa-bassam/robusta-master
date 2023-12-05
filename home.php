@@ -39,6 +39,8 @@ include 'components/add_cart.php';
     <!-- swiper cdn link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="images/android-chrome-512x512.png" type="image/x-icon">
 
 </head>
 <body>

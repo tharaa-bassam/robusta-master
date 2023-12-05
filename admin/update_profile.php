@@ -75,7 +75,7 @@ if(isset($_POST['submit'])){
 
 </head>
 <body>
-<?php include '../components/admin_slider.php'; ?>
+
 <?php   include '../components/admin_header.php' ?>
 
 
@@ -90,6 +90,7 @@ if(isset($_POST['submit'])){
       <input type="password" name="new_pass" maxlength="20" placeholder="enter your new password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="confirm_pass" maxlength="20" placeholder="confirm your new password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="submit" value="update now" name="submit" class="btn">
+      <a class="btn" href="dashboard.php">go back</a>
    </form>
 
 </section>

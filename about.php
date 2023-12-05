@@ -25,10 +25,16 @@ if(isset($_SESSION['user_id'])){
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
    <script src="https://kit.fontawesome.com/6487c144b2.js" crossorigin="anonymous"></script>
+      <!-- Google Web Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Itim&family=Kalam:wght@400;700&family=Merriweather:wght@300;700&family=Poppins:wght@200;300&family=Quicksand&family=Raleway:wght@300;400&family=Shadows+Into+Light&family=Yellowtail&display=swap" rel="stylesheet">
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="./css/style.css">
    <link rel="stylesheet" href="css/components.css">
+     <!-- Favicon -->
+     <link rel="icon" href="images/android-chrome-512x512.png" type="image/x-icon">
 
 
 </head>
@@ -95,20 +101,17 @@ if(isset($_SESSION['user_id'])){
 
         <div class="box-container">
 
-            <div class="box">
-                <img src="images/jpo.png" alt="">
-                <h3>choose your favorite coffe</h3>
+        <div class="box">
+                <img src="images/work-3.gif" alt="">
+                <h3>Choose your favourite coffee</h3>
             </div>
 
             <div class="box">
                 <img src="images/work-2.gif" alt="">
-                <h3>free and fast delivery</h3>
+                <h3> fast delivery</h3>
             </div>
 
-            <div class="box">
-                <img src="images/work-3.gif" alt="">
-                <h3>easy payments methods</h3>
-            </div>
+        
 
             <div class="box">
                 <img src="images/work-4.gif" alt="">
@@ -131,7 +134,7 @@ if(isset($_SESSION['user_id'])){
     <div class="sub-container">
         <div class="teams">
             <img src="images/barsta2.png" alt="">
-            <div class="name">rami</div>
+            <div class="name">Sahar</div>
             <div class="desig">Barista</div>
             <div class="breif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum labore quam
                 reprehenderit
@@ -147,7 +150,7 @@ if(isset($_SESSION['user_id'])){
 
         <div class="teams">
             <img src="images/barsta1.png" alt="">
-            <div class="name">layla </div>
+            <div class="name">Laith </div>
             <div class="desig">Barista</div>
             <div class="breif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum labore quam
                 reprehenderit
@@ -163,7 +166,7 @@ if(isset($_SESSION['user_id'])){
 
         <div class="teams">
             <img src="images/barsta3.jpg" alt="">
-            <div class="name">sahar </div>
+            <div class="name">Rami </div>
             <div class="desig">Barista</div>
             <div class="breif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum labore quam
                 reprehenderit

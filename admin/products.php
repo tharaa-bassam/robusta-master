@@ -15,9 +15,12 @@ if (isset($_POST['add_product'])) {
    $name = $_POST['name'];
    $name = filter_var($name, FILTER_SANITIZE_STRING);
    $price = $_POST['price'];
-   $price = filter_var($price, FILTER_SANITIZE_STRING);
+   $price = filter_var($price, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
    $category = $_POST['category'];
    $category = filter_var($category, FILTER_SANITIZE_STRING);
+
+   $description = $_POST['description'];
+   $description = filter_var($description, FILTER_SANITIZE_STRING);
 
    $image = $_FILES['image']['name'];
    $image = filter_var($image, FILTER_SANITIZE_STRING);
@@ -36,10 +39,10 @@ if (isset($_POST['add_product'])) {
       } else {
          move_uploaded_file($image_tmp_name, $image_folder);
 
-         $insert_product = $conn->prepare("INSERT INTO `products`(name, category, price, image) VALUES(?,?,?,?)");
-         $insert_product->execute([$name, $category, $price, $image]);
+         $insert_product = $conn->prepare("INSERT INTO `products`(name,description,category, price, image ) VALUES(?,?,?,?,?)");
+         $insert_product->execute([$name,$description, $category, $price, $image , ]);
 
-         $message[] = 'new product added!';
+        // $message[] = 'new product added!';
       }
    }
 }
@@ -109,6 +112,8 @@ if (isset($_GET['delete'])) {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: inline;
+
          }
 
          .option-btn:hover, .delete-btn:hover {
@@ -128,7 +133,7 @@ if (isset($_GET['delete'])) {
 
 <?php
  include '../components/admin_slider.php'; ?>
-<?php include '../components/admin_header.php' ?>
+
 
    <!-- add products section starts  -->
 
@@ -137,7 +142,9 @@ if (isset($_GET['delete'])) {
       <form action="" method="POST" enctype="multipart/form-data">
          <h3>add product</h3>
          <input type="text" required placeholder="enter product name" name="name" maxlength="100" class="box">
-         <input type="number" min="0" max="9999999999" required placeholder="enter product price" name="price" onkeypress="if(this.value.length == 10) return false;" class="box">
+         <!-- <input type="number" min="0" max="9999999999" required placeholder="enter product price" name="price" onkeypress="if(this.value.length == 10) return false;" class="box"> -->
+         <input type="text" pattern="^\d+(\.\d{1,2})?$" min="0" max="9999999999" required placeholder="Enter product price" name="price" class="box">
+
          <select name="category" class="box" required>
             <option value="" selected disabled>select category</option>
             <?php
@@ -152,6 +159,8 @@ if (isset($_GET['delete'])) {
             }
             ?>
          </select>
+         <textarea name="description" placeholder=" enter your description " class="box" rows="4" required></textarea>
+
          <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png, image/webp" required>
          <input type="submit" value="add product" name="add_product" class="btn">
       </form>
@@ -169,6 +178,8 @@ if (isset($_GET['delete'])) {
             <tr>
                <th>Image</th>
                <th>Name</th>
+               <th>description</th>
+
                <th>Category</th>
                <th>Price</th>
                <th>Actions</th>
@@ -181,6 +192,8 @@ if (isset($_GET['delete'])) {
                   echo '<tr>';
                   echo '<td><img src="../uploaded_img/' . $fetch_products['image'] . '" alt="' . $fetch_products['name'] . '"></td>';
                   echo '<td>' . $fetch_products['name'] . '</td>';
+                  echo '<td>' . $fetch_products['description'] . '</td>';
+
                   echo '<td>' . $fetch_products['category'] . '</td>';
                   echo '<td>' . $fetch_products['price'] . 'JD </td>';
                   echo '<td>';

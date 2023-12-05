@@ -16,13 +16,16 @@ if (isset($_POST['update'])) {
    $pid = filter_var($pid, FILTER_SANITIZE_STRING);
    $name = $_POST['name'];
    $name = filter_var($name, FILTER_SANITIZE_STRING);
+   $description = $_POST['description'];
+   $description = filter_var($description, FILTER_SANITIZE_STRING);
    $price = $_POST['price'];
    $price = filter_var($price, FILTER_SANITIZE_STRING);
    $category = $_POST['category'];
    $category = filter_var($category, FILTER_SANITIZE_STRING);
+  
 
-   $update_product = $conn->prepare("UPDATE `products` SET name = ?, category = ?, price = ? WHERE id = ?");
-   $update_product->execute([$name, $category, $price, $pid]);
+   $update_product = $conn->prepare("UPDATE `products` SET name = ?, description =? , category = ?, price = ?  WHERE id = ?");
+   $update_product->execute([$name, $description, $category, $price, $pid,]);
 
    $message[] = 'product updated!';
 
@@ -90,10 +93,12 @@ if (isset($_POST['update'])) {
                <span>update name</span>
                <input type="text" required placeholder="enter product name" name="name" maxlength="100" class="box" value="<?= $fetch_products['name']; ?>">
                <span>update price</span>
-               <input type="number" min="0" max="9999999999" required placeholder="enter product price" name="price" onkeypress="if(this.value.length == 10) return false;" class="box" value="<?= $fetch_products['price']; ?>">
+               <input type="text" pattern="^\d+(\.\d{1,2})?$" min="0" max="9999999999" required placeholder="Enter product price" name="price" class="box">
+
                <span>update category</span>
                <select name="category" class="box" required>
             <option value="" selected disabled>select category</option>
+            
             <?php
             // Retrieve categories from the database
             $select_categories = $conn->prepare("SELECT * FROM categories");
@@ -106,6 +111,8 @@ if (isset($_POST['update'])) {
             }
             ?>
          </select>
+         <textarea name="description" placeholder=" enter your description " class="box" rows="4" required></textarea>
+
                <span>update image</span>
                <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png, image/webp">
                <div class="flex-btn">

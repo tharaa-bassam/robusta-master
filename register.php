@@ -4,13 +4,13 @@ include 'components/connect.php';
 
 session_start();
 
-if(isset($_SESSION['user_id'])){
+if (isset($_SESSION['user_id'])) {
    $user_id = $_SESSION['user_id'];
-}else{
+} else {
    $user_id = '';
 };
 
-if(isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
 
    $name = $_POST['name'];
    $name = filter_var($name, FILTER_SANITIZE_STRING);
@@ -23,31 +23,39 @@ if(isset($_POST['submit'])){
    $cpass = sha1($_POST['cpass']);
    $cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
 
-   $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ? OR number = ?");
-   $select_user->execute([$email, $number]);
-   $row = $select_user->fetch(PDO::FETCH_ASSOC);
+   // Validate Jordanian phone number format
+   if (!preg_match("/^07[0-9]{8}$/", $number)) {
+      $message[] = 'Please enter a valid Jordanian number starting with 07 and containing 10 digits!';
+   } else {
 
-   if($select_user->rowCount() > 0){
-      $message[] = 'email or number already exists!';
-   }else{
-      if($pass != $cpass){
-         $message[] = 'confirm password not matched!';
-      }else{
-         $insert_user = $conn->prepare("INSERT INTO `users`(name, email, number, password) VALUES(?,?,?,?)");
-         $insert_user->execute([$name, $email, $number, $cpass]);
-         $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ? AND password = ?");
-         $select_user->execute([$email, $pass]);
-         $row = $select_user->fetch(PDO::FETCH_ASSOC);
-         if($select_user->rowCount() > 0){
-            $_SESSION['user_id'] = $row['id'];
-            header('location:home.php');
+      $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ? OR number = ?");
+      $select_user->execute([$email, $number]);
+      $row = $select_user->fetch(PDO::FETCH_ASSOC);
+
+      if ($select_user->rowCount() > 0) {
+         $message[] = 'Email or number already exists!';
+      } else {
+         if ($pass != $cpass) {
+            $message[] = 'Confirm password not matched!';
+         } else {
+            $insert_user = $conn->prepare("INSERT INTO `users`(name, email, number, password) VALUES(?,?,?,?)");
+            $insert_user->execute([$name, $email, $number, $cpass]);
+
+            $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ? AND password = ?");
+            $select_user->execute([$email, $cpass]); // Use $cpass instead of $pass
+            $row = $select_user->fetch(PDO::FETCH_ASSOC);
+
+            if ($select_user->rowCount() > 0) {
+               $_SESSION['user_id'] = $row['id'];
+               header('location:home.php');
+            }
          }
       }
    }
-
 }
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,20 +71,18 @@ if(isset($_POST['submit'])){
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/components.css">
+   
 
-
+  <link rel="icon" href="images/android-chrome-512x512.png" type="image/x-icon">
 </head>
 <body>
    
-<!-- header section starts  -->
 <?php include 'components/user_header.php'; ?>
-<!-- header section ends -->
 
 <section class="form-container">
-     <img src="images/login.jpg" alt="User Image" style="width: 100%; border-bottom: 1px solid #ddd;">
 
    <form action="" method="post">
-   <!-- <img src="images/login.jpg" alt="User Image" style="width: 100%; border-bottom: 1px solid #ddd;"> -->
+  
 
       <h3>register now</h3>
       
@@ -110,7 +116,6 @@ if(isset($_POST['submit'])){
 
 
 
-<!-- custom js file link  -->
 <script src="js/script.js"></script>
 
 </body>

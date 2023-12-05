@@ -53,7 +53,8 @@ $grand_total = 0;
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/components.css">
 
-
+  <!-- Favicon -->
+  <link rel="icon" href="images/android-chrome-512x512.png" type="image/x-icon">
 </head>
 <body>
    

@@ -80,7 +80,7 @@ if (isset($_GET['delete'])) {
 
    </style>
    <?php include '../components/admin_slider.php'; ?>
-<?php include '../components/admin_header.php' ?>
+
    <!-- placed orders section starts  -->
 
 
@@ -119,7 +119,7 @@ if (isset($_GET['delete'])) {
                         <td><?= $fetch_orders['number']; ?></td>
                         <td><?= $fetch_orders['address']; ?></td>
                         <td><?= $fetch_orders['total_products']; ?></td>
-                        <td>$<?= $fetch_orders['total_price']; ?></td>
+                        <td><?= $fetch_orders['total_price']; ?>JD</td>
                         <td><?= $fetch_orders['method']; ?></td>
                         <td>
                            <form action="" method="POST">

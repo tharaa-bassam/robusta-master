@@ -36,7 +36,7 @@ if(isset($_POST['add_category'])){
          $insert_category = $conn->prepare("INSERT INTO `categories`(name,  image) VALUES(?,?)");
          $insert_category->execute([$name, $image]);
 
-         $message[] = 'new category added!';
+         //$message[] = 'new category added!';
       }
 
    }
@@ -125,7 +125,7 @@ if(isset($_GET['delete'])){
 </head>
 <body>
 <?php include '../components/admin_slider.php'; ?>
-<?php include '../components/admin_header.php' ?>
+
 
 <!-- add categories section starts  -->
 

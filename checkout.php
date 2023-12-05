@@ -41,7 +41,10 @@ if(isset($_POST['submit'])){
          $delete_cart = $conn->prepare("DELETE FROM `cart` WHERE user_id = ?");
          $delete_cart->execute([$user_id]);
 
-         $message[] = 'order placed successfully!';
+        // $message[] = 'order placed successfully!';
+         // Redirect to the Thank You page
+      header('location: thank_you.php');
+      exit; // Ensure no further execution after redirection
       }
       
    }else{
@@ -67,7 +70,8 @@ if(isset($_POST['submit'])){
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/components.css">
 
-
+  <!-- Favicon -->
+  <link rel="icon" href="images/android-chrome-512x512.png" type="image/x-icon">
 </head>
 <body>
    
@@ -129,9 +133,6 @@ if(isset($_POST['submit'])){
       <select name="method" class="box" required>
          <option value="" disabled selected>select payment method --</option>
          <option value="cash on delivery">cash on delivery</option>
-         <option value="credit card">credit card</option>
-         <option value="paytm">paytm</option>
-         <option value="paypal">paypal</option>
       </select>
       <input type="submit" value="place order" class="btn <?php if($fetch_profile['address'] == ''){echo 'disabled';} ?>" style="width:100%; background:var(--red); color:var(--white);" name="submit">
    </div>

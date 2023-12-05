@@ -69,6 +69,24 @@ section{
    text-align: center;
 }
 
+.del-btn {
+   background-color: #e74c3c; /* Red background color */
+   color: #fff; /* White text color */
+   padding: 7px 15px; /* Padding for the button */
+   border: none; /* Remove button border */
+   border-radius: 5px; /* Add border radius for rounded corners */
+   cursor: pointer; /* Add pointer cursor on hover */
+   text-decoration: none; /* Remove default link underline */
+   position: relative;
+   left:90rem;
+   margin-left: 10px; /* Adjust margin if needed */
+}
+
+.del-btn:hover {
+   background-color: #c0392b; /* Darker red background color on hover */
+}
+
+
 .btn{
    background-color: var(--main-color);
 }
@@ -119,7 +137,7 @@ section{
 .message i:hover{
    color:var(--black);
 }
-
+/******************************/
 .heading{
    text-align: center;
    margin-bottom: 2rem;
@@ -215,12 +233,13 @@ section{
 .header .flex .navbar a{
    margin:0 1rem;
    font-size: 2rem;
-   color:#1e1e1e;
+   color:#e8e6e6;
+   cursor: alias;
 }
 
-.header .flex .navbar a:hover{
+/* .header .flex .navbar a:hover{
    color:var(--main-color);
-}
+} */
 
 .header .flex .icons > *{
    font-size: 2.5rem;
@@ -760,3 +779,8 @@ p {
 
 
 
+.header .flex .ad-name{
+   font-size: 20px;
+   margin-left: 4rem;
+   cursor: alias;
+}

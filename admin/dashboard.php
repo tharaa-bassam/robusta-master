@@ -39,7 +39,7 @@ if (!isset($admin_id)) {
 
    <?php
      include '../components/admin_slider.php';
-    include '../components/admin_header.php';
+    
     ?>
 
    <!-- admin dashboard section starts  -->
