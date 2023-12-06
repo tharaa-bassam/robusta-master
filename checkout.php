@@ -41,7 +41,7 @@ if(isset($_POST['submit'])){
          $delete_cart = $conn->prepare("DELETE FROM `cart` WHERE user_id = ?");
          $delete_cart->execute([$user_id]);
 
-        // $message[] = 'order placed successfully!';
+        
          // Redirect to the Thank You page
       header('location: thank_you.php');
       exit; // Ensure no further execution after redirection

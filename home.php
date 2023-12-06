@@ -58,21 +58,21 @@ include 'components/add_cart.php';
 
         <div class="swiper-slide slide" style="background: url(images/home-1.jpg) no-repeat;">
             <div class="content">
-                <h3>the <span>tastiest</span> coffe <br> on the planet</h3>
+                <h3>the <span>tastiest</span> coffee <br> on the planet</h3>
                 <a href="menu.php" class="btn">order now</a>
             </div>
         </div>
 
         <div class="swiper-slide slide" style="background: url(images/home-4.jpg) no-repeat;">
             <div class="content">
-                <h3>the <span>tastiest</span> coffe <br> on the planet</h3>
+                <h3>the <span>tastiest</span> coffee <br> on the planet</h3>
                 <a href="menu.php" class="btn">order now</a>
             </div>
         </div>
 
         <div class="swiper-slide slide" style="background: url(images/home-3.jpg) no-repeat;">
             <div class="content">
-                <h3>the <span>tastiest</span> coffe <br> on the planet</h3>
+                <h3>the <span>tastiest</span> coffee <br> on the planet</h3>
                 <a href="menu.php" class="btn">order now</a>
             </div>
         </div>
@@ -209,7 +209,6 @@ include 'components/add_cart.php';
          <input type="hidden" name="price" value="<?= $fetch_products['price']; ?>">
          <input type="hidden" name="image" value="<?= $fetch_products['image']; ?>">
          <a href="quick_view.php?pid=<?= $fetch_products['id']; ?>" class="fa-regular fa-eye"></a>
-         <!-- <button type="submit" class="fas fa-shopping-cart" name="add_to_cart"></button> -->
          <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
          <a href="category.php?category=<?= $fetch_products['category']; ?>" class="cat"><?= $fetch_products['category']; ?></a>
          <div class="name"><?= $fetch_products['name']; ?></div>

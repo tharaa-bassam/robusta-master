@@ -63,7 +63,7 @@ font-size: 1.5rem;
       .thank-btn {
          display: inline-block;
          padding: 10px 20px;
-         background-color: #3498db;
+         background-color: #ff7800;
          color: #fff;
          text-decoration: none;
          border-radius: 5px;
@@ -73,7 +73,7 @@ font-size: 1.5rem;
       }
 
       .thank-btn:hover {
-         background-color: #2980b9;
+         background-color: #777;
          letter-spacing: 1px;
       }
    </style>

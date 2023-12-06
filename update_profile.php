@@ -21,10 +21,13 @@ if(isset($_POST['submit'])){
    $number = $_POST['number'];
    $number = filter_var($number, FILTER_SANITIZE_STRING);
 
+
+// Update the name in the database if it's not empty.
    if(!empty($name)){
       $update_name = $conn->prepare("UPDATE `users` SET name = ? WHERE id = ?");
       $update_name->execute([$name, $user_id]);
    }
+// Check and update the email if it's not already taken.
 
    if(!empty($email)){
       $select_email = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
@@ -37,6 +40,7 @@ if(isset($_POST['submit'])){
       }
    }
 
+ // Check and update the number if it's not already taken.
    if(!empty($number)){
       $select_number = $conn->prepare("SELECT * FROM `users` WHERE number = ?");
       $select_number->execute([$number]);
@@ -48,7 +52,7 @@ if(isset($_POST['submit'])){
       }
    }
    
-   $empty_pass = 'da39a3ee5e6b4b0d3255bfef95601890afd80709';
+   $empty_pass = 'da39a3ee5e6b4b0d3255bfef95601890afd80709'; //This specific value is often used as a placeholder or representation of an empty or default password.
    $select_prev_pass = $conn->prepare("SELECT password FROM `users` WHERE id = ?");
    $select_prev_pass->execute([$user_id]);
    $fetch_prev_pass = $select_prev_pass->fetch(PDO::FETCH_ASSOC);
@@ -59,6 +63,8 @@ if(isset($_POST['submit'])){
    $new_pass = filter_var($new_pass, FILTER_SANITIZE_STRING);
    $confirm_pass = sha1($_POST['confirm_pass']);
    $confirm_pass = filter_var($confirm_pass, FILTER_SANITIZE_STRING);
+   
+// Check if the old password matches the stored password.
 
    if($old_pass != $empty_pass){
       if($old_pass != $prev_pass){

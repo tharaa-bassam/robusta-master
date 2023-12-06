@@ -131,7 +131,7 @@ if (!isset($admin_id)) {
             <a href="users_accounts.php" class="btn">see users</a>
          </div>
 
-         <div class="box">
+         <!-- <div class="box">
             <?php
             $select_admins = $conn->prepare("SELECT * FROM `admin`");
             $select_admins->execute();
@@ -140,7 +140,7 @@ if (!isset($admin_id)) {
             <h3><?= $numbers_of_admins; ?></h3>
             <p>admins</p>
             <a href="admin_accounts.php" class="btn">see admins</a>
-         </div>
+         </div> -->
 
          <div class="box">
             <?php

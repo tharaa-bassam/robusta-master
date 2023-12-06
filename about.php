@@ -141,9 +141,9 @@ if(isset($_SESSION['user_id'])){
                 vitae aliquam dicta! </div>
 
             <div class="social-links">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a target="_blank" href="https://www.instagram.com/___robusta___/"><i class="fa fa-facebook"></i></a>
+                <a target="_blank" href="https://www.instagram.com/___robusta___/"><i class="fa fa-instagram"></i></a>
+                <a target="_blank" href="https://www.instagram.com/___robusta___/"><i class="fa fa-twitter"></i></a>
                
             </div>
         </div>
@@ -157,9 +157,9 @@ if(isset($_SESSION['user_id'])){
                 vitae aliquam dicta! </div>
 
             <div class="social-links">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a target="_blank" href="https://www.instagram.com/___robusta___/"><i class="fa fa-facebook"></i></a>
+                <a target="_blank" href="https://www.instagram.com/___robusta___/"><i class="fa fa-instagram"></i></a>
+                <a target="_blank" href="https://www.instagram.com/___robusta___/"><i class="fa fa-twitter"></i></a>
                
             </div>
         </div>
@@ -173,9 +173,9 @@ if(isset($_SESSION['user_id'])){
                 vitae aliquam dicta! </div>
 
             <div class="social-links">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a target="_blank" href="https://www.instagram.com/___robusta___/"><i class="fa fa-facebook"></i></a>
+                <a target="_blank" href="https://www.instagram.com/___robusta___/"><i class="fa fa-instagram"></i></a>
+                <a target="_blank" href="https://www.instagram.com/___robusta___/"><i class="fa fa-twitter"></i></a>
                
             </div>
         </div>

@@ -126,7 +126,7 @@ tr:hover {
             <tr>
                <th>Username</th>
                <th>email</th>
-               <th>password</th>
+              
 
                <th>Actions</th>
             </tr>
@@ -138,7 +138,7 @@ tr:hover {
                   echo '<tr>';
                   echo '<td>' . $fetch_accounts['name'] . '</td>';
                   echo '<td>' . $fetch_accounts['email'] . '</td>';
-                  echo '<td>' . $fetch_accounts['password'] . '</td>';
+                  
 
                   echo '<td>';
                   echo '<a href="users_accounts.php?delete=' . $fetch_accounts['id'] . '" class="delete-btn" onclick="return confirm(\'Delete this account?\');">Delete</a>';
